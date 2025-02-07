@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will you be my Valentine?</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fce4ec;
+            text-align: center;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #d81b60;
+        }
+
+        .message {
+            font-size: 1.5em;
+            margin: 20px;
+            color: #c2185b;
+        }
+
+        .heart {
+            font-size: 4em;
+            color: red;
+        }
+
+        .button {
+            background-color: #d81b60;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #c2185b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Will you be my Valentine?</h1>
+        <div class="heart">❤️</div>
+        <p class="message">I think you’re amazing, and I’d love to spend Valentine’s Day with you!</p>
+        <button class="button" onclick="alert('Yay! You said Yes!')">Yes, I’d love to!</button>
+        <button class="button" onclick="alert('Oh no! Maybe next time.')">Maybe next time</button>
+    </div>
+</body>
+</html>
