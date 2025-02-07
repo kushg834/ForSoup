@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will you be my Valentine?</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe6f7;
+            text-align: center;
+            color: #4a148c;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #d500f9;
+            margin-top: 20px;
+        }
+
+        .buttons {
+            margin-top: 50px;
+        }
+
+        .button {
+            background-color: #d500f9;
+            color: white;
+            padding: 20px 40px;
+            font-size: 1.5em;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 10px;
+        }
+
+        .button:hover {
+            background-color: #d81b60;
+        }
+
+        .yes {
+            font-size: 1.5em;
+        }
+
+        .no {
+            font-size: 1.5em;
+        }
+
+        .container {
+            display: none;
+            margin-top: 50px;
+        }
+
+        .flowers {
+            font-size: 3em;
+            color: #ff4081;
+        }
+
+        .golden-retriever {
+            font-size: 2.5em;
+            color: #ffcc00;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Will you be my Valentine?</h1>
+    <div class="buttons">
+        <button class="button yes" id="yesButton" onclick="yesClicked()">Yes</button>
+        <button class="button no" id="noButton" onclick="noClicked()">No</button>
+    </div>
+
+    <div class="container" id="messageContainer">
+        <p class="flowers">💐🌸🌷 Here's a bouquet just for you! 💐🌸🌷</p>
+        <p class="golden-retriever">🐶🐾 Here are some cute golden retrievers! 🐾🐶</p>
+    </div>
+
+    <script>
+        let yesButton = document.getElementById("yesButton");
+        let noButton = document.getElementById("noButton");
+        let messageContainer = document.getElementById("messageContainer");
+
+        // Function when "Yes" is clicked
+        function yesClicked() {
+            // Hide buttons
+            document.querySelector(".buttons").style.display = "none";
+            // Show message container
+            messageContainer.style.display = "block";
+        }
+
+        // Function when "No" is clicked
+        function noClicked() {
+            // Increase the size of the "Yes" button and decrease the "No" button size
+            yesButton.style.fontSize = (parseFloat(window.getComputedStyle(yesButton).fontSize) * 1.2) + "px";
+            noButton.style.fontSize = (parseFloat(window.getComputedStyle(noButton).fontSize) * 0.8) + "px";
+        }
+    </script>
+
+</body>
+</html>
